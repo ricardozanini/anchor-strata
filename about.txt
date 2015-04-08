@@ -1,0 +1,5 @@
+Theme name:    Anchor Strata
+Description:   A simple, minimalist template that actually began life as an unused redesign of n33.co (my personal site). Includes a (configurable) parallax background effect, Poptrox-powered lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
+Author name:   html5up.net | @n33co
+Author site:   http://dribbble.com/n33
+License:       http://html5up.net/license
