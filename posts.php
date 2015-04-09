@@ -1,50 +1,37 @@
 <?php theme_include('header'); ?>
 
-<section class="content">
+<?php if (has_posts()): ?>
+    <?php posts(); ?>
+    <section id="one">
+        <header class="major">
+            <h2><a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a></h2>
+        </header>
+        <?php echo article_markdown(); ?>
+    </section>
 
-	<?php if(has_posts()): ?>
-		<ul class="items">
-			<?php posts(); ?>
-			<li>
-				<article class="wrap">
-					<h1>
-						<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-					</h1>
 
-					<div class="content">
-						<?php echo article_markdown(); ?>
-					</div>
+    <section id="two">
+        <h2>Veja mais:</h2>
+        <div class="row">
+            <?php
+            while (posts()):
+                ?>
+                <article class="6u 12u$(xsmall)">
+                    <h4><a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a></h4>
+                    <p><?php echo article_description(); ?></p>
+                </article>
+            <?php endwhile; ?>
+        </div>
+        <?php if (has_pagination()): ?>
+            <ul class="actions">
+                <li><a href="<?php echo posts_prev(); ?>" class="button">Anterior</a></li>
+                <li><a href="<?php echo posts_next(); ?>" class="button">Pr&oacute;ximo</a></li>
+            </ul>
+        <?php endif; ?>
 
-					<footer>
-						Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time> by <?php echo article_author('real_name'); ?>.
-					</footer>
-				</article>
-			</li>
-			<?php $i = 0; while(posts()): ?>
-			<?php $bg = sprintf('background: hsl(215, 28%%, %d%%);', round(((++$i / posts_per_page()) * 20) + 20)); ?>
-			<li style="<?php echo $bg; ?>">
-				<article class="wrap">
-					<h2>
-						<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-					</h2>
-				</article>
-			</li>
-			<?php endwhile; ?>
-		</ul>
+    </section>
 
-		<?php if(has_pagination()): ?>
-		<nav class="pagination">
-			<div class="wrap">
-				<?php echo posts_prev(); ?>
-				<?php echo posts_next(); ?>
-			</div>
-		</nav>
-		<?php endif; ?>
+<?php endif; ?>
 
-	<?php else: ?>
-		<p>Looks like you have some writing to do!</p>
-	<?php endif; ?>
-
-</section>
-
-<?php theme_include('footer'); ?>
+<?php
+theme_include('footer');
