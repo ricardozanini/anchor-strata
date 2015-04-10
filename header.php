@@ -6,13 +6,16 @@
         <meta name="description" content="<?php echo site_description(); ?>" />
         <meta name="keywords" content="" />
         <!--[if lte IE 8]><script src="<?php echo theme_url('/css/ie/html5shiv.js'); ?>"></script><![endif]-->
+        <script>window._templateDirectory = '<?php echo theme_url('/'); ?>';</script>
         <script src="<?php echo theme_url('/js/jquery.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/jquery.poptrox.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/skel.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/init.js'); ?>"></script>
-        <link rel="stylesheet" href="<?php echo theme_url('/css/skel.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo theme_url('/css/style-xlarge.css'); ?>" />
+        <noscript>
+            <link rel="stylesheet" href="<?php echo theme_url('/css/skel.css'); ?>" />
+            <link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>" />
+            <link rel="stylesheet" href="<?php echo theme_url('/css/style-xlarge.css'); ?>" />
+        </noscript>
         <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo theme_url('/css/ie/v8.css'); ?>" /><![endif]-->
 
     </head>
