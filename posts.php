@@ -23,11 +23,10 @@
                     <?php 
                     $imgurl = article_custom_field('featured_image');
                     if ($imgurl): ?>
-                        <a href="<?php echo $imgurl ?>" class="image fit thumb"><img src="<?php echo $imgurl ?>" alt="" /></a>
+                        <a href="<?php echo article_url(); ?>" class="image fit thumb"><img src="<?php echo $imgurl ?>" alt="" /></a>
                     <?php endif; ?>                    
                     <h4><?php echo article_title(); ?></h4>
                     <p><?php echo article_description(); ?></p>
-                    <p><a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>" class="button">Continue lendo..</a></p>
                 </article>
             <?php endwhile; ?>
         </div>
