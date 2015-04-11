@@ -84,3 +84,11 @@ function facebook_url() {
 function total_articles() {
     return Post::where(Base::table('posts.status'), '=', 'published')->count();
 }
+
+function get_avatar() {
+    $avatar_url = site_meta('avatar_url', '');
+    if (empty($avatar_url)) {
+        $avatar_url = theme_url('/images/avatar.jpg');
+    }
+    return $avatar_url;
+}

@@ -26,7 +26,7 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="#" class="image avatar"><img src="<?php echo theme_url('/images/avatar.jpg'); ?>" alt="" /></a>
+            <a href="#" class="image avatar"><img src="<?php echo get_avatar(); ?>" alt="" /></a>
             <h1><?php echo site_description(); ?></h1>
         </header>
 

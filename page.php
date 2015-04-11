@@ -4,7 +4,10 @@
     <header class="major">
         <h2><?php echo page_title(); ?></h2>
     </header>
-    <?php echo page_content(); ?>
+    <article>
+        <?php echo page_content(); ?>
+    </article>
+    <p><a href="<?php echo base_url() ?>">&larr; Home</a></p>
 </section>
 
 <?php
