@@ -26,6 +26,9 @@
             xsmall: {media: '(max-width: 480px)', href: window._templateDirectory + 'css/style-xsmall.css'}
         }
     });
+    
+    // highlight.js
+    hljs.initHighlightingOnLoad();
 
     $(function () {
 

@@ -1,0 +1,23 @@
+/*
+Custom CSS classes that are not part of the original theme
+*/
+
+.post-item {
+    margin: 0 0 2em 0;
+}
+
+.post-item .image {
+    margin: 0 0 1.5em 0;
+}
+
+.post-item h3 {
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
+}
+
+.post-item p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0;
+}
+

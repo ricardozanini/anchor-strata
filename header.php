@@ -9,6 +9,7 @@
         <script>window._templateDirectory = '<?php echo theme_url('/'); ?>';</script>
         <script src="<?php echo theme_url('/js/jquery.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/jquery.poptrox.min.js'); ?>"></script>
+        <script src="<?php echo theme_url('/js/highlight.pack.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/skel.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/init.js'); ?>"></script>
         <noscript>
@@ -17,7 +18,8 @@
             <link rel="stylesheet" href="<?php echo theme_url('/css/style-xlarge.css'); ?>" />
         </noscript>
         <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo theme_url('/css/ie/v8.css'); ?>" /><![endif]-->
-
+        <link rel="stylesheet" href="<?php echo theme_url('/css/style-custom.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo theme_url('/css/highlight/github.css'); ?>" />
     </head>
 
     <body id="top">

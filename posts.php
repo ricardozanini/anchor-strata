@@ -19,13 +19,14 @@
             <?php
             while (posts()):
                 ?>
-                <article class="6u 12u$(xsmall)">
-                    <?php 
+                <article class="6u 12u$(xsmall) post-item">
+                    <?php
                     $imgurl = article_custom_field('featured_image');
-                    if ($imgurl): ?>
-                        <a href="<?php echo article_url(); ?>" class="image fit thumb"><img src="<?php echo $imgurl ?>" alt="" /></a>
+                    if ($imgurl):
+                        ?>
+                        <a href="<?php echo article_url(); ?>" class="image fit"><img src="<?php echo $imgurl ?>" alt="" /></a>
                     <?php endif; ?>                    
-                    <h4><?php echo article_title(); ?></h4>
+                    <h3> <a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h3>
                     <p><?php echo article_description(); ?></p>
                 </article>
             <?php endwhile; ?>
